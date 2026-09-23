@@ -1,0 +1,3 @@
+STT,Mã bệnh án,Mã bệnh nhân,Tên bệnh nhân,Ngày nhập viện,Ngày ra viện,Lý do nhập viện,Phí nằm viện,Loại VIP,Thời hạn VIP
+1,BA-001,BN-001,Nguyen Van A,01/01/2023,10/01/2023,Sot xuat huyet,1000000.0,,
+2,BA-002,BN-002,Tran Thi B,05/01/2023,12/01/2023,Viem tich cuc,,VIP I,31/12/2024
