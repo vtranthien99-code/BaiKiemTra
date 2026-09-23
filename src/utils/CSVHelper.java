@@ -20,7 +20,7 @@ public class CSVHelper {
         }
 
         try (BufferedReader br = new BufferedReader(new FileReader(file))) {
-            String line = br.readLine(); // Skip header
+            String line = br.readLine();
             while ((line = br.readLine()) != null) {
                 if (line.trim().isEmpty()) continue;
                 String[] parts = line.split(",", -1);
@@ -34,11 +34,9 @@ public class CSVHelper {
                 String lyDoNhapVien = parts[6];
 
                 if (!parts[7].isEmpty()) {
-                    // BenhAnThuong
                     double phiNamVien = Double.parseDouble(parts[7]);
                     list.add(new BenhAnThuong(stt, maBenhAn, maBenhNhan, tenBenhNhan, ngayNhapVien, ngayRaVien, lyDoNhapVien, phiNamVien));
                 } else {
-                    // BenhAnVIP
                     String loaiVIP = parts[8];
                     String thoiHanVIP = parts[9];
                     list.add(new BenhAnVIP(stt, maBenhAn, maBenhNhan, tenBenhNhan, ngayNhapVien, ngayRaVien, lyDoNhapVien, loaiVIP, thoiHanVIP));

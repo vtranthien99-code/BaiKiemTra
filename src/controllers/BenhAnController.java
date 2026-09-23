@@ -101,7 +101,6 @@ public class BenhAnController {
                 System.out.println("Mã bệnh án không đúng định dạng. Vui lòng nhập lại.");
                 continue;
             }
-            // Check duplicate
             boolean isDuplicate = danhSachBenhAn.stream().anyMatch(ba -> ba.getMaBenhAn().equals(ma));
             if (isDuplicate) {
                 throw new DuplicateMedicalRecordException("Bệnh án đã tồn tại.");
